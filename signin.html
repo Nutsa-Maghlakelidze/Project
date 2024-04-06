@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>User Registration</h1>
+    <form action="profile.py" method="post">
+        <div>
+            <label for="name">First name</label>
+            <input type="text" name="name" id="name" placeholder="Enter your first name">
+        </div>
+        <br />
+        <div>
+            <label for="surname">Last name</label>
+            <input type="text" name="surname" id="surname" placeholder="Enter your last name">
+        </div>
+        <br />
+        <div class="gender-options">
+            <label for="gender">Gender:</label>
+            <div class="gender-select">
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female" class="gender-label">Female</label>
+                
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male" class="gender-label">Male</label>
+                
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other" class="gender-label">Other</label>
+            </div>
+        </div>
+        <br />
+        <div>
+            <label for="birthdate">Birthdate:</label>
+            <input type="date" name="birthdate" id="birthdate">
+        </div>
+        <br />
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email address">
+        </div>
+        <br>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="Enter your password" maxlength="10">
+        </div>
+        <br />
+        <div>
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm your password" maxlength="10">
+        </div>
+        <br />
+        <div>
+            <label for="phone">Phone:</label>
+            <input type="tel" name="phone" id="phone" placeholder="Enter your phone number">
+        </div>
+        <br />       
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" name="age" id="age" placeholder="Enter your age" min="0" max="199" value="10">
+        </div>
+        <br />  
+        <div class="tacbox">
+            <input id="checkbox" type="checkbox" name="agreement" required>
+            <label for="checkbox">I've read and agree to the terms and conditions</label>
+        </div>
+        <br /> 
+        <input type="submit" value="Submit">
+    </form>
+
+    <div class="comment-section">
+        <h2>Leave a Comment</h2>
+        <form action="index.html" method="post">
+            <textarea name="comment" id="comment" rows="4" placeholder="Write your comment here"></textarea>
+            <br />
+            <hr />
+            <input type="submit" value="Submit Comment">
+        </form>
+    </div>
+
+    <h3 id="return">Return to the <a href="index.html">Main Page</a></h3>
+</body>
+</html>
